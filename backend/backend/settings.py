@@ -8,10 +8,10 @@ SECRET_KEY = 'django-insecure-j_89af+30&&4qm*8z9_(^zz8p4-ho8z_m6ylm0s$h!-p@on1_^
 
 DEBUG = True
 
-ALLOWED_HOSTS = ['localhost', '127.0.0.1', '158.160.237.140', 'yataskiksi.duckdns.org']
+ALLOWED_HOSTS = ['localhost','127.0.0.1','backend','158.160.237.140','yataskiksi.duckdns.org',]
 
+CSRF_TRUSTED_ORIGINS = ['https://yataskiksi.duckdns.org',]
 
-# Application definition
 
 INSTALLED_APPS = [
     'api.apps.ApiConfig',
@@ -62,14 +62,12 @@ WSGI_APPLICATION = 'backend.wsgi.application'
 
 DATABASES = {
     'default': {
-        # Меняем настройку Django: теперь для работы будет использоваться
-        # бэкенд postgresql
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': os.getenv('POSTGRES_DB', 'django'),
         'USER': os.getenv('POSTGRES_USER', 'django'),
         'PASSWORD': os.getenv('POSTGRES_PASSWORD', ''),
         'HOST': os.getenv('DB_HOST', ''),
-        'PORT': os.getenv('DB_PORT', 5432)
+        'PORT': os.getenv('DB_PORT', 5432),
     }
 }
 
