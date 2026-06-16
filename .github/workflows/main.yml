@@ -96,7 +96,7 @@ jobs:
         with:
           context: ./backend/
           push: true
-          tags: kindarufy/taski_backend:latest
+          tags: sergey1l/taski_backend:latest
 
   build_frontend_and_push_to_docker_hub:
     name: Push frontend Docker image to Docker Hub
@@ -121,7 +121,7 @@ jobs:
         with:
           context: ./frontend/
           push: true
-          tags: kindarufy/taski_frontend:latest
+          tags: sergey1l/taski_frontend:latest
 
   build_gateway_and_push_to_docker_hub:
     name: Push gateway Docker image to Docker Hub
@@ -145,7 +145,7 @@ jobs:
         with:
           context: ./gateway/
           push: true
-          tags: kindarufy/taski_gateway:latest
+          tags: sergey1l/taski_gateway:latest
 
   deploy:
     name: Deploy to production server
