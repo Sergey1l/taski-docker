@@ -44,7 +44,7 @@ jobs:
           POSTGRES_USER: taski_user
           POSTGRES_PASSWORD: taski_password
           POSTGRES_DB: taski
-          DB_HOST: db
+          DB_HOST: 127.0.0.1
           DB_PORT: 5432
         run: |
           python -m flake8 backend/
