@@ -11,9 +11,6 @@ DEBUG = True
 ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'backend',
                  '158.160.237.140', 'yataskiksi.duckdns.org',]
 
-CSRF_TRUSTED_ORIGINS = ['https://yataskiksi.duckdns.org',]
-
-
 INSTALLED_APPS = [
     'api.apps.ApiConfig',
     'django.contrib.admin',
@@ -118,5 +115,6 @@ STATIC_ROOT = BASE_DIR / 'collected_static'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 CORS_ORIGIN_WHITELIST = [
-    'http://localhost:3000'
+    'http://localhost:3000',
+    'http://127.0.0.1:3000',
 ]
