@@ -11,7 +11,7 @@ DEBUG = True
 ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'backend',
                  '158.160.237.140', 'yataskiksi.duckdns.org',]
 
-CSRF_TRUSTED_ORIGINS = [' http://yataskiksi.duckdns.org',]
+CSRF_TRUSTED_ORIGINS = ['http://yataskiksi.duckdns.org',]
 
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
