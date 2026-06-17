@@ -11,6 +11,10 @@ DEBUG = True
 ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'backend',
                  '158.160.237.140', 'yataskiksi.duckdns.org',]
 
+CSRF_TRUSTED_ORIGINS = ['158.160.237.140', 'yataskiksi.duckdns.org',]
+
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+
 INSTALLED_APPS = [
     'api.apps.ApiConfig',
     'django.contrib.admin',
@@ -116,5 +120,4 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 CORS_ORIGIN_WHITELIST = [
     'http://localhost:3000',
-    'http://127.0.0.1:3000',
 ]
