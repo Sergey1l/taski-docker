@@ -11,11 +11,15 @@ services:
     env_file: .env
     volumes:
       - pg_data_production:/var/lib/postgresql/data
+    restart: always
   backend:
     image: sergey1l/taski_backend # Качаем с Docker Hub
     env_file: .env
     volumes:
       - static_volume:/backend_static
+    depends_on:
+      - db
+    restart: always
   frontend:
     image: sergey1l/taski_frontend  # Качаем с Docker Hub
     env_file: .env
@@ -29,3 +33,7 @@ services:
       - static_volume:/staticfiles/
     ports:
       - 8000:80
+    depends_on:
+      - backend
+      - frontend
+    restart: always
