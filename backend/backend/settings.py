@@ -10,6 +10,8 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['localhost','127.0.0.1',  '158.160.237.140', 'yataskiksi.duckdns.org']
 
+CSRF_TRUSTED_ORIGINS = ['https://yataskiksi.duckdns.org',]
+
 
 # Application definition
 
