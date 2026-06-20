@@ -1,7 +1,7 @@
 # docker-compose.production.yml
 
 volumes:
-  pg_data_production:
+  pg_data:
   static_volume:
 
 # Всё отличие — заменяем build на image и указываем, какой образ использовать
@@ -10,7 +10,7 @@ services:
     image: postgres:13.10
     env_file: .env
     volumes:
-      - pg_data_production:/var/lib/postgresql/data
+      - pg_data:/var/lib/postgresql/data
     restart: always
   backend:
     image: sergey1l/taski_backend # Качаем с Docker Hub
